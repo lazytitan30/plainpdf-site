@@ -3,27 +3,57 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Plain PDF privacy policy</title>
+<title>Privacy policy · Plain PDF</title>
 <style>
-  :root { color-scheme: light dark; --ink: #1b1b1b; --muted: #5b625f; --accent: #2f6b5a; --bg: #fafaf8; --line: #dcdfdc; }
-  @media (prefers-color-scheme: dark) { :root { --ink: #ececea; --muted: #a9b0ac; --accent: #8fc7b3; --bg: #121413; --line: #2e3331; } }
-  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-  main { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
-  h1 { font-size: 2rem; margin: 0 0 .25rem; }
-  h2 { font-size: 1.3rem; margin-top: 2rem; }
-  .date { color: var(--muted); margin: 0 0 1.5rem; }
-  a { color: var(--accent); }
-  table { border-collapse: collapse; width: 100%; font-size: .95rem; }
-  th, td { text-align: left; vertical-align: top; padding: .5rem .6rem; border-bottom: 1px solid var(--line); }
-  th { color: var(--muted); font-weight: 600; }
+  :root { --paper: #f3eee4; --ink: #1c1a17; --ink-soft: #5a554c; --rule: #cfc6b4; --green: #2f6b5a; --green-ink: #ffffff; }
+  @media (prefers-color-scheme: dark) { :root { --paper: #17181a; --ink: #ebe6db; --ink-soft: #a49f94; --rule: #35383c; --green: #7fbfa6; --green-ink: #10201a; } }
+  * { box-sizing: border-box; }
+  html { color-scheme: light dark; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Charter, Georgia, serif; font-size: 18px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  .page { max-width: 46rem; margin: 0 auto; padding: 0 1.5rem 5rem; }
+  header { display: flex; align-items: center; justify-content: space-between; padding: 1.4rem 0 1.1rem; border-bottom: 2px solid var(--ink); }
+  .mark { display: flex; align-items: center; gap: .7rem; text-decoration: none; }
+  .mark svg { width: 34px; height: 34px; display: block; }
+  .mark span { font-size: 1.25rem; }
+  nav { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; }
+  nav a { text-decoration: none; margin-left: 1.6rem; color: var(--ink-soft); }
+  nav a:hover { color: var(--ink); }
+  .label { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-soft); margin: 3rem 0 .6rem; }
+  h1 { font-weight: 400; font-size: clamp(2rem, 4.5vw, 2.8rem); line-height: 1.1; letter-spacing: -.015em; margin: 0 0 .5rem; }
+  .date { color: var(--ink-soft); margin: 0 0 2rem; }
+  h2 { font-weight: 400; font-size: 1.45rem; margin: 2.4rem 0 .6rem; padding-top: 1.2rem; border-top: 1px solid var(--rule); }
+  ul { padding-left: 1.2rem; }
+  li { margin: .35rem 0; }
   .wrap { overflow-x: auto; }
-  li { margin: .3rem 0; }
+  table { border-collapse: collapse; width: 100%; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-size: .92rem; border-top: 2px solid var(--ink); }
+  th, td { text-align: left; vertical-align: top; padding: .6rem .6rem .6rem 0; border-bottom: 1px solid var(--rule); }
+  th { color: var(--ink-soft); font-weight: 600; letter-spacing: .06em; text-transform: uppercase; font-size: .76rem; }
+  footer { margin-top: 3.5rem; padding-top: 1.2rem; border-top: 1px solid var(--rule); color: var(--ink-soft); font-size: .95rem; }
+  footer a { color: var(--ink-soft); }
+  @media (max-width: 780px) { .page { padding: 0 1.15rem 4rem; } nav a { margin-left: 1.1rem; } }
 </style>
 </head>
 <body>
-<main>
-  <p><a href="./">Plain PDF</a></p>
-  <h1>Privacy policy for Plain PDF Reader &amp; Editor</h1>
+<div class="page">
+  <header>
+    <a class="mark" href="./" aria-label="Plain PDF home">
+      <svg viewBox="0 0 34 34" aria-hidden="true">
+        <path d="M7 2h14l6 6v24H7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M21 2v6h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        <rect x="3" y="17" width="28" height="9" fill="var(--green)"/>
+        <text x="17" y="24" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7.5" font-weight="700" fill="var(--green-ink)" letter-spacing=".5">PDF</text>
+      </svg>
+      <span>Plain PDF</span>
+    </a>
+    <nav>
+      <a href="privacy">Privacy</a>
+      <a href="support">Support</a>
+    </nav>
+  </header>
+
+  <p class="label">Privacy policy</p>
+  <h1>Plain PDF Reader &amp; Editor</h1>
   <p class="date">Last updated: 5 September 2026</p>
 
   <p>Plain PDF is a PDF reader and editor that works entirely on your device. This policy explains what the app stores, what it never does, and how to remove what it keeps.</p>
@@ -83,6 +113,8 @@
 
   <h2>Contact</h2>
   <p>Questions about privacy: write to <a href="mailto:support@plainpdf.app">support@plainpdf.app</a>. The source code is published from <a href="source">plainpdf.app/source</a>.</p>
-</main>
+
+  <footer>Plain PDF is free software under the GNU GPL v3. &nbsp;·&nbsp; <a href="./">Home</a> &nbsp;·&nbsp; <a href="support">Support</a></footer>
+</div>
 </body>
 </html>
